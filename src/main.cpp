@@ -111,6 +111,12 @@ void loop() {
     long now = micros();
     Serial.print(now - last);             Serial.print("\t");
     last = now;
+    Serial.print("Accelerometer - x: ");
+    Serial.print(sensorValue.un.accelerometer.x); Serial.print("\t");
+    Serial.print(" y: ");
+    Serial.print(sensorValue.un.accelerometer.y); Serial.print("\t");
+    Serial.print(" z: ");
+    Serial.print(sensorValue.un.accelerometer.z); Serial.print("\t");
     Serial.print(sensorValue.status);     Serial.print("\t");  // This is accuracy in the range of 0 to 3
     Serial.print(ypr.yaw);                Serial.print("\t");
     Serial.print(ypr.pitch);              Serial.print("\t");
